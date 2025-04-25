@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Séries</title>
+    </head>
+    <body>
+        <h1>Listar Séries</h1>
+        <ul>
+            <?php
+                foreach ($series as $serie) {
+                    echo "<li>$serie</li>";
+                }
+            ?>
+        </ul>
+    </body>
+</html>
