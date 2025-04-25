@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class SeriesController extends Controller
 {
-    public function index() 
+    public function index(Request $request): string
     {
         $series = [
             'The Witcher',
@@ -22,6 +22,6 @@ class SeriesController extends Controller
         }
         $html .= '</ul>';
 
-        echo $html;
+        return $html;
     }
 }
