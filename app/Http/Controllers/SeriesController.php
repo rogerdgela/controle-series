@@ -16,6 +16,6 @@ class SeriesController extends Controller
             'The Boys',
         ];
 
-        return view('listar-series')->with('series', $series);
+        return view('series.index')->with('series', $series);
     }
 }
