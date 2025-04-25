@@ -7,13 +7,11 @@
         <title>Séries</title>
     </head>
     <body>
-        <h1>Listar Séries</h1>
+        <h1>Séries</h1>
         <ul>
-            <?php
-                foreach ($series as $serie) {
-                    echo "<li>$serie</li>";
-                }
-            ?>
+            @foreach ($series as $serie)
+                <li>{{ $serie }}</li>
+            @endforeach
         </ul>
     </body>
 </html>
