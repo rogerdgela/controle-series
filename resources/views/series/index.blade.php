@@ -1,9 +1,9 @@
 <x-layout title="Séries">
-    <a href="/series/criar">Adicionar</a>
+    <a href="/series/criar" class="btn btn-primary mb-3">Adicionar</a>
 
-    <ul>
+    <div class="list-group">
         @foreach ($series as $serie)
-            <li>{{ $serie }}</li>
+            <a href="#" class="list-group-item list-group-item-action">{{ $serie }}</a>
         @endforeach
-    </ul>
+    </div>
 </x-layout>
