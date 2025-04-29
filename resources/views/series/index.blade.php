@@ -3,7 +3,7 @@
 
     <div class="list-group">
         @foreach ($series as $serie)
-            <a href="#" class="list-group-item list-group-item-action">{{ $serie }}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{ $serie->nome }}</a>
         @endforeach
     </div>
 </x-layout>
