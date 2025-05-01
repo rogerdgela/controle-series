@@ -1,9 +1,19 @@
 <x-layout title="Séries">
     <a href="{{ route('series.create') }}" class="btn btn-primary mb-3">Adicionar</a>
 
-    <div class="list-group">
+    <ul class="list-group">
         @foreach ($series as $serie)
-            <a href="#" class="list-group-item list-group-item-action">{{ $serie->nome }}</a>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ $serie->nome }}
+
+                <form action="{{ route('series.destroy', $serie->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger btn-sm float-end">
+                        x
+                    </button>
+                </form>
+            </li>
         @endforeach
-    </div>
+    </ul>
 </x-layout>
