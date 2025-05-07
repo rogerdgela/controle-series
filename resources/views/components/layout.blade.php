@@ -12,7 +12,7 @@
 
 <body class="bg-dark text-white">
     <div class="container">
-        <h1>Séries</h1>
+        <h1>{{ $title }}</h1>
         {{ $slot }}
     </div>
 </body>
