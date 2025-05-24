@@ -24,7 +24,9 @@ class SeriesFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:3|max:255'
+            'name' => 'required|min:3|max:255',
+            'seasonsQtd' => 'required|integer|min:1',
+            'episodesPerSeason' => 'required|integer|min:1'
         ];
     }
 
