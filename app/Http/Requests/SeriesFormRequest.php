@@ -30,12 +30,18 @@ class SeriesFormRequest extends FormRequest
         ];
     }
 
-    /*public function messages()
+    public function messages()
     {
         return [
-            'name.required' => "O campo name é obrigatorio",
-            'name.min' => "O campo name deve ter no minimo :min caracteres",
-            'name.max' => "O campo name deve ter no maximo :max caracteres",
+            'name.required' => "O campo Nome é obrigatorio",
+            'name.min' => "O campo Nome deve ter no minimo :min caracteres",
+            'name.max' => "O campo Nome deve ter no maximo :max caracteres",
+            'seasonsQtd.required' => "O campo Numero de Temporadas é obrigatorio",
+            'seasonsQtd.integer' => "O campo Numero de Temporadas deve ser um numero inteiro",
+            'seasonsQtd.min' => "O campo Numero de Temporadas deve ser maior que :min",
+            'episodesPerSeason.required' => "O campo Episódios por Temporada é obrigatorio",
+            'episodesPerSeason.integer' => "O campo Episódios por Temporada deve ser um numero inteiro",
+            'episodesPerSeason.min' => "O campo Episódios por Temporada deve ser maior que :min",
         ];
-    }*/
+    }
 }
