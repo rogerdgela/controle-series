@@ -5,12 +5,12 @@
     @method('PUT')
     @endif
     <div class="mb-3">
-        <label for="nome" class="form-label">Nome:</label>
+        <label for="name" class="form-label">Nome da Série:</label>
         <input type="text"
-               id="nome"
-               name="nome"
+               id="name"
+               name="name"
                class="form-control"
-               @isset($nome)value="{{ $nome }}"@endisset>
+               @isset($name)value="{{ $name }}"@endisset>
     </div>
 
     <div class="btn-group">

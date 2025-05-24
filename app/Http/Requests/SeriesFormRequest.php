@@ -24,16 +24,16 @@ class SeriesFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|min:3|max:255'
+            'name' => 'required|min:3|max:255'
         ];
     }
 
     /*public function messages()
     {
         return [
-            'nome.required' => "O campo nome é obrigatorio",
-            'nome.min' => "O campo nome deve ter no minimo :min caracteres",
-            'nome.max' => "O campo nome deve ter no maximo :max caracteres",
+            'name.required' => "O campo name é obrigatorio",
+            'name.min' => "O campo name deve ter no minimo :min caracteres",
+            'name.max' => "O campo name deve ter no maximo :max caracteres",
         ];
     }*/
 }
