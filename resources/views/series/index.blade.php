@@ -16,7 +16,7 @@
             </a>
 
             <span class="d-flex">
-                <a href="" class="btn btn-primary btn-sm">
+                <a href="{{ route('series.edit', $serie->id) }}" class="btn btn-primary btn-sm">
                     <i class="bi bi-safe"></i>
                 </a>
                 <form action="{{ route('series.destroy', $serie->id) }}" method="POST" class="ms-2">
