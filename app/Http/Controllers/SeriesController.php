@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SeriesFormRequest;
 use App\Models\Series;
 use Illuminate\Http\Request;
-use App\Repositories\SeriesRepositories;
+use App\Repositories\SeriesRepository;
 
 class SeriesController extends Controller
 {
-    public function __construct(private SeriesRepositories $repository)
+    public function __construct(private SeriesRepository $repository)
     {
         $this->repository = $repository;
     }
