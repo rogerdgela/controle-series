@@ -195,6 +195,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Repository Providers
+        App\Providers\SeriesRepositoryProvider::class,
     ],
 
     /*
