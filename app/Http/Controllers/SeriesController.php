@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SeriesFormRequest;
 use App\Models\Series;
-use Illuminate\Http\Request;
 use App\Repositories\SeriesRepository;
+use Illuminate\Http\Request;
 
 class SeriesController extends Controller
 {
     public function __construct(private SeriesRepository $repository)
     {
-        $this->repository = $repository;
     }
 
     public function index(Request $request)
@@ -19,7 +18,8 @@ class SeriesController extends Controller
         $series = Series::all();
         $mensagemSucesso = session('mensagem.sucesso');
 
-        return view('series.index')->with('series', $series)->with('mensagemSucesso', $mensagemSucesso);
+        return view('series.index')->with('series', $series)
+            ->with('mensagemSucesso', $mensagemSucesso);
     }
 
     public function create()
@@ -32,15 +32,15 @@ class SeriesController extends Controller
         $serie = $this->repository->add($request);
 
         return to_route('series.index')
-            ->with('mensagem.sucesso', "Série \"{$serie->name}\" adicionada com sucesso!");
-    }   
+            ->with('mensagem.sucesso', "Série '{$serie->nome}' adicionada com sucesso");
+    }
 
     public function destroy(Series $series)
     {
         $series->delete();
 
         return to_route('series.index')
-            ->with('mensagem.sucesso', "Série \"{$series->name}\" removida com sucesso!");
+            ->with('mensagem.sucesso', "Série '{$series->nome}' removida com sucesso");
     }
 
     public function edit(Series $series)
@@ -53,6 +53,7 @@ class SeriesController extends Controller
         $series->fill($request->all());
         $series->save();
 
-        return to_route('series.index')->with('mensagem.sucesso', "Série \"{$series->name}\" atualizada com sucesso!");
+        return to_route('series.index')
+            ->with('mensagem.sucesso', "Série '{$series->nome}' atualizada com sucesso");
     }
 }

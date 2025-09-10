@@ -2,10 +2,10 @@
 
 namespace App\Repositories;
 
-use App\Models\Series;
-use App\Models\Season;
-use App\Models\Episode;
 use App\Http\Requests\SeriesFormRequest;
+use App\Models\Episode;
+use App\Models\Season;
+use App\Models\Series;
 use Illuminate\Support\Facades\DB;
 
 class EloquentSeriesRepository implements SeriesRepository

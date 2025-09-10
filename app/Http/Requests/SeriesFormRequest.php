@@ -19,29 +19,12 @@ class SeriesFormRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, mixed>
+     * @return array
      */
     public function rules()
     {
         return [
-            'name' => 'required|min:3|max:255',
-            'seasonsQtd' => 'required|integer|min:1',
-            'episodesPerSeason' => 'required|integer|min:1'
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'name.required' => "O campo Nome é obrigatorio",
-            'name.min' => "O campo Nome deve ter no minimo :min caracteres",
-            'name.max' => "O campo Nome deve ter no maximo :max caracteres",
-            'seasonsQtd.required' => "O campo Numero de Temporadas é obrigatorio",
-            'seasonsQtd.integer' => "O campo Numero de Temporadas deve ser um numero inteiro",
-            'seasonsQtd.min' => "O campo Numero de Temporadas deve ser maior que :min",
-            'episodesPerSeason.required' => "O campo Episódios por Temporada é obrigatorio",
-            'episodesPerSeason.integer' => "O campo Episódios por Temporada deve ser um numero inteiro",
-            'episodesPerSeason.min' => "O campo Episódios por Temporada deve ser maior que :min",
+            'nome' => ['required', 'min:2'],
         ];
     }
 }

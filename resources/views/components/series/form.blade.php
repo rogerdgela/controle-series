@@ -5,16 +5,13 @@
     @method('PUT')
     @endif
     <div class="mb-3">
-        <label for="name" class="form-label">Nome da Série:</label>
+        <label for="nome" class="form-label">Nome:</label>
         <input type="text"
-               id="name"
-               name="name"
+               id="nome"
+               name="nome"
                class="form-control"
-               @isset($name)value="{{ $name }}"@endisset>
+               @isset($nome)value="{{ $nome }}"@endisset>
     </div>
 
-    <div class="btn-group">
-        <button type="submit" class="btn btn-success"><i class="bi bi-save"></i> Salvar</button>
-        <a href="/series" class="btn btn-danger"><i class="bi bi-arrow-return-left"></i> Voltar</a>
-    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
 </form>
