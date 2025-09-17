@@ -14,10 +14,10 @@ class LoginController
 
     public function store(Request $request)
     {
-        if(!Auth::attempt($request->only(['email', 'password']))) {
+        if (!Auth::attempt($request->only(['email', 'password']))) {
             return redirect()->back()->withErrors('Usuário ou senha inválidos');
         }
-        
+
         return to_route('series.index');
     }
 
@@ -25,6 +25,6 @@ class LoginController
     {
         Auth::logout();
 
-        return to_route('login.index');
+        return to_route('login');
     }
 }

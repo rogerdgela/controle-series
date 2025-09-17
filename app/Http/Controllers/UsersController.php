@@ -16,11 +16,10 @@ class UsersController
 
     public function store(Request $request)
     {
-        $data = $request->except('_token');
+        $data = $request->except(['_token']);
         $data['password'] = Hash::make($data['password']);
-        
-        $user = User::create($data);
 
+        $user = User::create($data);
         Auth::login($user);
 
         return to_route('series.index');
